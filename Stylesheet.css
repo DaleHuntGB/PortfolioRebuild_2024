@@ -4,17 +4,22 @@
     --CLR_TBG: #4A4A4A;
     --CLR_TXT: #F5F5F5;
     --CLR_ACCENT: #4080FF;
-    --CLR_LINKHOVER: #8080FF;
+    --CLR_LINKHOVER: #FFFFFF;
+    --FWEIGHT-HEADER: 900;
+    --FWEIGHT-BODY: 500;
+    --FWEIGHT-LINK: 700;
 }
 
 * {
     margin: 0em;
     padding: 0em;
     box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: var(--FWEIGHT-BODY);
 }
 
 body, html {
-    font-family: 'Roboto', sans-serif;
     background-color: var(--CLR_BG);
     color: var(--CLR_TXT);
     font-size: 1em;
@@ -27,6 +32,14 @@ body, html {
     z-index: 0;
 }
 
+.ForceFullScreen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 3em;
+    flex: 1 1 auto;
+}
+
 .NavBarContainer {
     display: flex;
     justify-content: center;
@@ -34,7 +47,7 @@ body, html {
     padding: 1em 2em;
     background-color: var(--CLR_SBG);
     border-bottom: 1px solid var(--CLR_ACCENT);
-    position: sticky;
+    position: fixed;
     width: 100%;
     z-index: 999;
     top: 0;
@@ -44,6 +57,8 @@ body, html {
     color: var(--CLR_ACCENT);
     text-decoration: none;
     margin: 0em 1em;
+    text-align: center;
+    font-weight: var(--FWEIGHT-LINK);
 }
 
 .NavBarContainer > a:hover {
@@ -59,6 +74,9 @@ body, html {
     text-align: center;
     > h1 {
         margin: 1em;
+        color: var(--CLR_ACCENT);
+        user-select: none;
+        font-weight: var(--FWEIGHT-HEADER);
     }
 }
 
@@ -71,6 +89,7 @@ body, html {
     text-align: center;
     > p {
         width: 70ch;
+        font-weight: var(--FWEIGHT-BODY);
     }
 }
 
@@ -83,13 +102,17 @@ body, html {
     margin: 1em;
     text-align: center;
     > .ProjectContainer {
-        border: 3px solid var(--CLR_ACCENT);
+        border: 1px solid var(--CLR_ACCENT);
         border-radius: 0.5em;
         padding: 1em;
         background-color: var(--CLR_TBG);
         margin: 0.5em 0em;
+        > h1 {
+            font-weight: var(--FWEIGHT-HEADER);
+        }
     }
     > p {
         width: 70ch;
+        font-weight: var(--FWEIGHT-BODY);
     }
 }
