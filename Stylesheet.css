@@ -40,6 +40,11 @@ body, html {
     flex: 1 1 auto;
 }
 
+.Bold_Accent {
+    font-weight: var(--FWEIGHT-HEADER);
+    color: var(--CLR_ACCENT);
+}
+
 .NavBarContainer {
     display: flex;
     justify-content: center;
@@ -85,11 +90,13 @@ body, html {
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 1em;
     text-align: center;
     > p {
         width: 70ch;
         font-weight: var(--FWEIGHT-BODY);
+        padding: 1em 0em;
     }
 }
 
@@ -109,6 +116,7 @@ body, html {
         margin: 0.5em 0em;
         > h1 {
             font-weight: var(--FWEIGHT-HEADER);
+            color: var(--CLR_ACCENT);
         }
     }
     > p {
