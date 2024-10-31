@@ -84,23 +84,6 @@ body, html {
         font-weight: var(--FWEIGHT-HEADER);
         position: relative;
     }
-    > h1:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 1px;
-        background-color: var(--CLR_ACCENT);
-        transition: width 1s ease-in-out;
-        transform-origin: left;
-    }
-    > h1:hover:after {
-        width: 100%;
-    }
-    > h1:not(:hover):after {
-        width: 0%;
-    }
 }
  
 
@@ -141,5 +124,26 @@ body, html {
     > p {
         width: 70ch;
         font-weight: var(--FWEIGHT-BODY);
+    }
+}
+
+/* Animations */
+
+.ShouldColourPulse {
+    animation: ColourPulse 1s ease-in-out forwards;
+}
+
+@keyframes ColourPulse {
+    0% {
+        color: var(--CLR_ACCENT);
+        scale: 1;
+    }
+    33% {
+        color: var(--CLR_TXT);
+        scale: 0.9;
+    }
+    66% {
+        color: var(--CLR_ACCENT);
+        scale: 1;
     }
 }
