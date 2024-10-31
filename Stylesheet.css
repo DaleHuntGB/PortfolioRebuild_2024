@@ -32,7 +32,7 @@ body, html {
     z-index: 0;
 }
 
-.ForceFullScreen {
+.MainContainer {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -82,8 +82,27 @@ body, html {
         color: var(--CLR_ACCENT);
         user-select: none;
         font-weight: var(--FWEIGHT-HEADER);
+        position: relative;
+    }
+    > h1:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--CLR_ACCENT);
+        transition: width 1s ease-in-out;
+        transform-origin: left;
+    }
+    > h1:hover:after {
+        width: 100%;
+    }
+    > h1:not(:hover):after {
+        width: 0%;
     }
 }
+ 
 
 .AboutContainer {
     display: flex;
