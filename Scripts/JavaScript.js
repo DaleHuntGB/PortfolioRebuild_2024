@@ -26,24 +26,20 @@ function generateStar() {
     setTimeout(() => { createdStar.remove(); }, 1000);
 }
 
-const projects = [
-    { element: document.querySelector('#AerialSpaceProject'), minWidth: 425 },
-    { element: document.querySelector('#MinimapStatsProject'), minWidth: 425 }
-];
-
 function updateImageWidths() {
-    projects.forEach(({ element, minWidth }) => {
-        if (element && window.innerWidth >= minWidth) {
-            const images = element.querySelectorAll("img");
-            const imageWidth = 100 / images.length;
+    document.querySelectorAll('.Project').forEach((project) => {
+        const images = project.querySelectorAll("img");
+        const minWidth = 425;
 
+        if (window.innerWidth >= minWidth) {
+            const imageWidth = 100 / images.length;
             images.forEach((img) => {
                 img.style.maxWidth = `${imageWidth}%`;
                 img.style.width = "100%";
                 img.style.boxSizing = "border-box";
             });
-        } else if (element) {
-            element.querySelectorAll("img").forEach((img) => {
+        } else {
+            images.forEach((img) => {
                 img.style.maxWidth = "";
                 img.style.width = "";
                 img.style.boxSizing = "";
@@ -73,7 +69,7 @@ function createImageZoom() {
 
         document.body.appendChild(zoomContainer);
 
-        document.querySelectorAll('#AerialSpaceProject img, #MinimapStatsProject img').forEach((img) => {
+        document.querySelectorAll('.Project img').forEach((img) => {
             img.addEventListener('click', () => {
                 zoomedImg.src = img.src;
                 zoomContainer.style.display = 'flex';
