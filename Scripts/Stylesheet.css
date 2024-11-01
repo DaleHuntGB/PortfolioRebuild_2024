@@ -74,7 +74,8 @@ body, html {
     align-items: center;
     padding: 1em 1em;
     background-color: var(--CLR_SBG);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.25) 0px 5px 5px;
+    border-radius: 0em 0em 0.5em 0.5em;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -166,6 +167,7 @@ body, html {
         width: 100%;
         height: auto;
         border-radius: 0.5em;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(0, 0, 0, 0.25) 0px 3px 6px;
     }
 }
 
