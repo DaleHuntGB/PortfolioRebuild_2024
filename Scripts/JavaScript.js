@@ -28,6 +28,7 @@ function generateStar() {
 
 // Project Containers
 const ASProject = document.querySelector('#AerialSpaceProject');
+const MSProject = document.querySelector('#MinimapStatsProject');
 
 function updateImageWidths() {
     if (ASProject && isPC && window.innerWidth >= 768) {
@@ -43,6 +44,25 @@ function updateImageWidths() {
     } else if (ASProject) {
         const ASImages = ASProject.querySelectorAll("img");
         ASImages.forEach((img) => {
+            img.style.maxWidth = "";
+            img.style.width = "";
+            img.style.boxSizing = "";
+        });
+    }
+
+    if (MSProject && isPC && window.innerWidth >= 768) {
+        const MSImages = MSProject.querySelectorAll("img");
+        const NumberOfMSImages = MSImages.length;
+        const IndividualImageWidth = 100 / NumberOfMSImages;
+
+        MSImages.forEach((img) => {
+            img.style.maxWidth = `${IndividualImageWidth}%`;
+            img.style.width = "100%";
+            img.style.boxSizing = "border-box";
+        });
+    } else if (MSProject) {
+        const MSImages = MSProject.querySelectorAll("img");
+        MSImages.forEach((img) => {
             img.style.maxWidth = "";
             img.style.width = "";
             img.style.boxSizing = "";

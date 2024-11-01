@@ -151,6 +151,17 @@ body, html {
             max-width: var(--PARA_WIDTH);
             font-weight: var(--FWEIGHT-BODY);
             margin: auto;
+            > a {
+                color: var(--CLR_ACCENT);
+                text-decoration: none;
+                text-align: center;
+                font-weight: var(--FWEIGHT-LINK);
+                transition: 0.5s ease-in-out color;
+            }
+            > a:hover {
+                color: var(--CLR_LINKHOVER);
+                transition: 0.5s ease-in-out color;
+            }
         }
     }
 }
