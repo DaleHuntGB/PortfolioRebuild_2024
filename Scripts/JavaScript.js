@@ -3,7 +3,7 @@ const ShootingStarContainer = document.querySelector('.ShootingStarsContainer')
 const isPC = window.matchMedia('(min-width: 1024px)'); // PC Detection
 const isShootingStars = document.querySelector('.ShootingStarsContainer') ? true : false; 
 
-if (isPC.matches) {
+if (isPC) {
     HomeContainer_Headers.forEach(Header => {
         Header.addEventListener('mouseenter', () => { Header.classList.add('ShouldColourPulse'); });
         Header.addEventListener('animationend', () => { Header.classList.remove('ShouldColourPulse'); });
@@ -25,3 +25,30 @@ function generateStar() {
     ShootingStarContainer.appendChild(createdStar);
     setTimeout(() => { createdStar.remove(); }, 1000);
 }
+
+// Project Containers
+const ASProject = document.querySelector('#AerialSpaceProject');
+
+function updateImageWidths() {
+    if (ASProject && isPC && window.innerWidth >= 768) {
+        const ASImages = ASProject.querySelectorAll("img");
+        const NumberOfASImages = ASImages.length;
+        const IndividualImageWidth = 100 / NumberOfASImages;
+
+        ASImages.forEach((img) => {
+            img.style.maxWidth = `${IndividualImageWidth}%`;
+            img.style.width = "100%";
+            img.style.boxSizing = "border-box";
+        });
+    } else if (ASProject) {
+        const ASImages = ASProject.querySelectorAll("img");
+        ASImages.forEach((img) => {
+            img.style.maxWidth = "";
+            img.style.width = "";
+            img.style.boxSizing = "";
+        });
+    }
+}
+document.addEventListener('DOMContentLoaded', updateImageWidths);
+window.addEventListener('resize', updateImageWidths);
+
