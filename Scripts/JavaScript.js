@@ -78,6 +78,7 @@ function createImageZoom() {
                 zoomedImg.src = img.src;
                 zoomContainer.style.display = 'flex';
                 zoomedImg.style.borderRadius = '0.5em';
+                zoomedImg.style.boxShadow = 'rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(0, 0, 0, 0.25) 0px 3px 6px';
             });
         });
 
