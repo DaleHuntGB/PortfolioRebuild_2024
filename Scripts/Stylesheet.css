@@ -74,7 +74,7 @@ body, html {
     align-items: center;
     padding: 1em 1em;
     background-color: var(--CLR_SBG);
-    border-bottom: 1px solid var(--CLR_ACCENT);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -121,7 +121,7 @@ body, html {
     margin: 1em;
     text-align: center;
     > p {
-        width: var(--PARA_WIDTH);
+        max-width: var(--PARA_WIDTH);
         font-weight: var(--FWEIGHT-BODY);
         padding: 1em 0em;
     }
@@ -136,11 +136,12 @@ body, html {
     margin: 1em;
     text-align: center;
     > .ProjectContainer {
-        border: 1px solid var(--CLR_ACCENT);
         border-radius: 0.5em;
         padding: 1em;
         background-color: var(--CLR_TBG);
         margin: 0.5em 0em;
+        width: 95%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
         > h1 {
             font-weight: var(--FWEIGHT-HEADER);
             color: var(--CLR_ACCENT);
@@ -151,7 +152,6 @@ body, html {
             margin: auto;
         }
     }
-
 }
 
 .ProjectContainerImages {
@@ -165,10 +165,10 @@ body, html {
     > img {
         width: 100%;
         height: auto;
-        object-fit: contain;
-        border: 1px solid var(--CLR_ACCENT);
+        border-radius: 0.5em;
     }
 }
+
 
 /* Animations */
 
@@ -210,7 +210,7 @@ body, html {
 }
 
 /* Media */
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 425px) {
     .NavBarContainer {
         flex-direction: column;
         align-items: center;
