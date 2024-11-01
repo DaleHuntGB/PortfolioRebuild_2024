@@ -145,11 +145,13 @@ body, html {
             font-weight: var(--FWEIGHT-HEADER);
             color: var(--CLR_ACCENT);
         }
+        > p {
+            max-width: var(--PARA_WIDTH);
+            font-weight: var(--FWEIGHT-BODY);
+            margin: auto;
+        }
     }
-    > p {
-        width: var(--PARA_WIDTH);
-        font-weight: var(--FWEIGHT-BODY);
-    }
+
 }
 
 .ProjectContainerImages {
