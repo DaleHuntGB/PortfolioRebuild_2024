@@ -36,6 +36,24 @@ body, html {
     user-select: none;
 }
 
+.ShootingStarsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ShootingStar {
+    position: absolute;
+    background: var(--CLR_TXT);
+    border-radius: 50%;
+    opacity: 100%;
+    animation: ShootingStarEffect 1s linear infinite;
+}
+
 .MainContainer {
     display: flex;
     flex-direction: column;
@@ -152,6 +170,24 @@ body, html {
     66% {
         color: var(--CLR_ACCENT);
         scale: 1;
+    }
+}
+
+@keyframes ShootingStarEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0) scale(0.5);
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(500px) translateX(-500px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(750px) translateX(-750px) scale(0.5);
     }
 }
 
