@@ -31,7 +31,7 @@ const ASProject = document.querySelector('#AerialSpaceProject');
 const MSProject = document.querySelector('#MinimapStatsProject');
 
 function updateImageWidths() {
-    if (ASProject && window.innerWidth >= 768) {
+    if (ASProject && window.innerWidth >= 425) {
         const ASImages = ASProject.querySelectorAll("img");
         const NumberOfASImages = ASImages.length;
         const IndividualImageWidth = 100 / NumberOfASImages;
@@ -50,7 +50,7 @@ function updateImageWidths() {
         });
     }
 
-    if (MSProject && window.innerWidth >= 768) {
+    if (MSProject && window.innerWidth >= 425) {
         const MSImages = MSProject.querySelectorAll("img");
         const NumberOfMSImages = MSImages.length;
         const IndividualImageWidth = 100 / NumberOfMSImages;
