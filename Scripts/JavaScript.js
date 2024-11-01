@@ -26,49 +26,69 @@ function generateStar() {
     setTimeout(() => { createdStar.remove(); }, 1000);
 }
 
-// Project Containers
-const ASProject = document.querySelector('#AerialSpaceProject');
-const MSProject = document.querySelector('#MinimapStatsProject');
+const projects = [
+    { element: document.querySelector('#AerialSpaceProject'), minWidth: 425 },
+    { element: document.querySelector('#MinimapStatsProject'), minWidth: 425 }
+];
 
 function updateImageWidths() {
-    if (ASProject && window.innerWidth >= 425) {
-        const ASImages = ASProject.querySelectorAll("img");
-        const NumberOfASImages = ASImages.length;
-        const IndividualImageWidth = 100 / NumberOfASImages;
+    projects.forEach(({ element, minWidth }) => {
+        if (element && window.innerWidth >= minWidth) {
+            const images = element.querySelectorAll("img");
+            const imageWidth = 100 / images.length;
 
-        ASImages.forEach((img) => {
-            img.style.maxWidth = `${IndividualImageWidth}%`;
-            img.style.width = "100%";
-            img.style.boxSizing = "border-box";
-        });
-    } else if (ASProject) {
-        const ASImages = ASProject.querySelectorAll("img");
-        ASImages.forEach((img) => {
-            img.style.maxWidth = "";
-            img.style.width = "";
-            img.style.boxSizing = "";
-        });
-    }
+            images.forEach((img) => {
+                img.style.maxWidth = `${imageWidth}%`;
+                img.style.width = "100%";
+                img.style.boxSizing = "border-box";
+            });
+        } else if (element) {
+            element.querySelectorAll("img").forEach((img) => {
+                img.style.maxWidth = "";
+                img.style.width = "";
+                img.style.boxSizing = "";
+            });
+        }
+    });
+}
 
-    if (MSProject && window.innerWidth >= 425) {
-        const MSImages = MSProject.querySelectorAll("img");
-        const NumberOfMSImages = MSImages.length;
-        const IndividualImageWidth = 100 / NumberOfMSImages;
+function createImageZoom() {
+    if (window.innerWidth < 768) {
+        const zoomContainer = document.createElement('div');
+        zoomContainer.style.position = 'fixed';
+        zoomContainer.style.top = 0;
+        zoomContainer.style.left = 0;
+        zoomContainer.style.width = '100vw';
+        zoomContainer.style.height = '100vh';
+        zoomContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        zoomContainer.style.display = 'none';
+        zoomContainer.style.alignItems = 'center';
+        zoomContainer.style.justifyContent = 'center';
+        zoomContainer.style.zIndex = 1000;
 
-        MSImages.forEach((img) => {
-            img.style.maxWidth = `${IndividualImageWidth}%`;
-            img.style.width = "100%";
-            img.style.boxSizing = "border-box";
+        const zoomedImg = document.createElement('img');
+        zoomedImg.style.maxWidth = '90vw';
+        zoomedImg.style.maxHeight = '90vh';
+        zoomContainer.appendChild(zoomedImg);
+
+        document.body.appendChild(zoomContainer);
+
+        document.querySelectorAll('#AerialSpaceProject img, #MinimapStatsProject img').forEach((img) => {
+            img.addEventListener('click', () => {
+                zoomedImg.src = img.src;
+                zoomContainer.style.display = 'flex';
+                zoomedImg.style.borderRadius = '0.5em';
+            });
         });
-    } else if (MSProject) {
-        const MSImages = MSProject.querySelectorAll("img");
-        MSImages.forEach((img) => {
-            img.style.maxWidth = "";
-            img.style.width = "";
-            img.style.boxSizing = "";
+
+        zoomContainer.addEventListener('click', () => {
+            zoomContainer.style.display = 'none';
         });
     }
 }
-document.addEventListener('DOMContentLoaded', updateImageWidths);
-window.addEventListener('resize', updateImageWidths);
 
+document.addEventListener('DOMContentLoaded', () => {
+    updateImageWidths();
+    createImageZoom();
+});
+window.addEventListener('resize', updateImageWidths);
