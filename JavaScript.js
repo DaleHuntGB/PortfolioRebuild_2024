@@ -1,13 +1,14 @@
 const HomeContainer_Headers = document.querySelectorAll('.HomeContainer > h1');
 const ShootingStarContainer = document.querySelector('.ShootingStarsContainer')
 const isPC = window.matchMedia('(min-width: 1024px)'); // PC Detection
+const isShootingStars = document.querySelector('.ShootingStarsContainer') ? true : false; 
 
 if (isPC.matches) {
     HomeContainer_Headers.forEach(Header => {
         Header.addEventListener('mouseenter', () => { Header.classList.add('ShouldColourPulse'); });
         Header.addEventListener('animationend', () => { Header.classList.remove('ShouldColourPulse'); });
     });
-    setInterval(generateStar, 300);
+    if (isShootingStars) { setInterval(generateStar, 300); }
 }
 
 function generateStar() {
