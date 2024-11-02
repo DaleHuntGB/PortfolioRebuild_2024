@@ -29,7 +29,7 @@ function generateStar() {
 function updateImageWidths() {
     document.querySelectorAll('.Project').forEach((project) => {
         const images = project.querySelectorAll("img");
-        const minWidth = 425;
+        const minWidth = 500;
 
         if (window.innerWidth >= minWidth) {
             const imageWidth = 100 / images.length;
