@@ -89,3 +89,40 @@ document.addEventListener('DOMContentLoaded', () => {
     createImageZoom();
 });
 window.addEventListener('resize', updateImageWidths);
+
+// Typing Animation
+
+const WordsToType = ["Dale Hunt", "Unhalted"];
+const TypingSpeed = 100;
+const DelayBetweenWords = 1500;
+
+let CurrentWord = 0;
+let CurrentChar = 0;
+let WordBeingTyped = WordsToType[CurrentWord];
+
+const TypingContainer = document.querySelector('.TypingEffect');
+
+function TypeWord() {
+    if (CurrentChar < WordBeingTyped.length) {
+        TypingContainer.textContent += WordBeingTyped.charAt(CurrentChar);
+        CurrentChar++;
+        setTimeout(TypeWord, TypingSpeed);
+    } else {
+        setTimeout(DeleteWord, DelayBetweenWords);
+    }
+}
+
+function DeleteWord() {
+    if (CurrentChar > 0) {
+        TypingContainer.textContent = WordBeingTyped.substring(0, CurrentChar - 1);
+        CurrentChar--;
+        setTimeout(DeleteWord, TypingSpeed / 2);
+    } else {
+        CurrentWord = (CurrentWord + 1) % WordsToType.length;
+        WordBeingTyped = WordsToType[CurrentWord];
+        setTimeout(TypeWord, TypingSpeed);
+    }
+}
+
+TypeWord();
+

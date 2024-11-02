@@ -209,6 +209,16 @@ body, html {
     animation: ColourPulse 0.5s ease-in-out forwards;
 }
 
+.TypingEffect {
+    height: 1.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-right: 1px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: TypingBlink 0.5s step-end infinite;
+}
+
 @keyframes ColourPulse {
     0% {
         color: var(--CLR_ACCENT);
@@ -239,6 +249,12 @@ body, html {
     100% {
         opacity: 0;
         transform: translateY(750px) translateX(-750px) scale(0.5);
+    }
+}
+
+@keyframes TypingBlink {
+    50% {
+        border-color: transparent;
     }
 }
 
@@ -274,6 +290,9 @@ body, html {
         }
     }
     #ExtraSpacing {
-        margin-top: 5em;
+        margin-top: 3em;
+    }
+    .TypingEffect {
+        display: none;
     }
  }
