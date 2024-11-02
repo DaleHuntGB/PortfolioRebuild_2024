@@ -72,7 +72,6 @@ body, html {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding: 1em 1em;
     background-color: var(--CLR_SBG);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.25) 0px 5px 5px;
     border-radius: 0em 0em 0.5em 0.5em;
@@ -80,15 +79,34 @@ body, html {
     width: 100%;
     z-index: 999;
     top: 0;
+    padding: 0.25em;
+    > .ProfilePicture {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+    > .PortfolioNavigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    > .Socials {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+    }
 }
 
 .NavBarContainer > * > a {
     color: var(--CLR_ACCENT);
     text-decoration: none;
-    margin: 0em 1em;
     text-align: center;
     font-weight: var(--FWEIGHT-LINK);
     transition: 0.5s ease-in-out color;
+    margin: 0em 1em;
 }
 
 .NavBarContainer > * > a:hover {
@@ -225,11 +243,19 @@ body, html {
 }
 
 /* Media */
- @media screen and (max-width: 500px) {
+ @media screen and (max-width: 700px) {
     .NavBarContainer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        > .ProfilePicture {
+            justify-content: center;
+            align-items: center;
+        }
+        > .Socials {
+            justify-content: center;
+            align-items: center;
+        }
     }
     .NavBarContainer > * > a {
         margin: 0.5em;
@@ -246,5 +272,8 @@ body, html {
             width: 100%;
             height: auto;
         }
+    }
+    #ExtraSpacing {
+        margin-top: 5em;
     }
  }
