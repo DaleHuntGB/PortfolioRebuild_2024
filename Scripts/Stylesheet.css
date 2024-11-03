@@ -4,7 +4,7 @@
     --CLR_SBG: #3A3A3A;
     --CLR_TBG: #4A4A4A;
     --CLR_TXT: #F5F5F5;
-    --CLR_ACCENT: #8080FF;
+    --CLR_ACCENT: #00FF90;
     --CLR_LINKHOVER: #FFFFFF;
     /* Fonts */
     --FWEIGHT-HEADER: 900;
@@ -216,8 +216,14 @@ body, html {
                 transition: 0.5s ease-in-out color;
             }
         }
+        > * > .RedNotFlag {
+            color: red;
+            font-weight: var(--FWEIGHT-BODY);
+        }
     }
 }
+
+
 
 .ProjectContainerImages {
     display: flex;
