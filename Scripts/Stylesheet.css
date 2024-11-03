@@ -1,7 +1,7 @@
 :root {
     /* Colours */
-    --CLR_BG: #222222;
-    --CLR_SBG: #303030;
+    --CLR_BG: #151515;
+    --CLR_SBG: #252525;
     --CLR_TBG: #303030;
     --CLR_TXT: #F5F5F5;
     --CLR_ACCENT: #FF8040;
@@ -158,7 +158,7 @@ body, html {
 .ProjectNavigator {
     position: fixed;
     width: fit-content;
-    left: 0;
+    left: 1em;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--CLR_SBG);
@@ -167,7 +167,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     z-index: 1000;
-    border-radius: 0em 0.5em 0.5em 0em;
+    border-radius: 0.5em;
     > a {
         color: var(--CLR_LINK);
         text-decoration: none;
@@ -262,7 +262,6 @@ body, html {
 
 
 /* Animations */
-
 .ShouldColourPulse {
     animation: ColourPulse 0.5s ease-in-out forwards;
 }
