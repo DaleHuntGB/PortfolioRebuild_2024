@@ -19,7 +19,7 @@
     margin: 0em;
     padding: 0em;
     box-sizing: border-box;
-    font-family: "Figtree", sans-serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: var(--FWEIGHT-BODY);
 }
