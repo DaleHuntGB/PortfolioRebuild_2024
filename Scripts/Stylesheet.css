@@ -361,6 +361,9 @@ body, html {
     .TypingEffect {
         display: none;
     }
+ }
+
+ @media screen and (max-width: 1024px ) {
     .ProjectNavigator {
         display: none;
     }
