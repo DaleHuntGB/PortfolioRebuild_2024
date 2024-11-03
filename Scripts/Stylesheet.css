@@ -48,14 +48,15 @@ body, html {
     height: 100vh;
     pointer-events: none;
     z-index: -1;
+    perspective: 1250px;
 }
 
 .ShootingStar {
     position: absolute;
-    background: var(--CLR_TXT);
+    background: var(--CLR_ACCENT);
     border-radius: 50%;
     opacity: 100%;
-    animation: ShootingStarEffect 1s linear infinite;
+    animation: ShootingStarEffect .5s linear infinite;
 }
 
 .MainContainer {
@@ -83,7 +84,7 @@ body, html {
     width: 100%;
     z-index: 999;
     top: 0;
-    padding: 0.25em;
+    padding: 0.5em;
     > .ProfilePicture {
         width: 100%;
         display: flex;
@@ -282,21 +283,39 @@ body, html {
 }
 
 @keyframes ShootingStarEffect {
-    0% {
+    /* 0% {
         opacity: 0;
-        transform: translateY(0) translateX(0) scale(0.5);
+        transform: translateY(0) translateX(0) scale(1);
     }
     25% {
         opacity: 1;
     }
     50% {
         opacity: 1;
-        transform: translateY(500px) translateX(-500px) scale(1);
+        transform: translateY(500px) translateX(-500px) scale(2);
     }
     100% {
         opacity: 0;
-        transform: translateY(750px) translateX(-750px) scale(0.5);
+        transform: translateY(750px) translateX(-750px) scale(1);
+    } */
+
+    0% {
+        opacity: 0;
+        transform: translateZ(0) scale(1);
     }
+    25% {
+        opacity: 1;
+        transform: translateZ(250px) scale(1.2);
+    }
+    50% {
+        opacity: 1;
+        transform: translateZ(500px) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translateZ(750px) scale(2);
+    }
+
 }
 
 @keyframes TypingBlink {
