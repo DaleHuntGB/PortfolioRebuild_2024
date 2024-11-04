@@ -4,9 +4,9 @@
     --CLR_SBG: #252525;
     --CLR_TBG: #303030;
     --CLR_TXT: #F5F5F5;
-    --CLR_ACCENT: #FF8040;
-    --CLR_ALTACCENT: #44BBA4;
-    --CLR_LINK: #5399BD;
+    --CLR_ACCENT: #70CFCF;
+    --CLR_ALTACCENT: #EE4040;
+    --CLR_LINK: #5A8EF5;
     --CLR_LINKHOVER: #FFFFFF;
     /* Fonts */
     --FWEIGHT-HEADER: 900;
@@ -87,24 +87,6 @@ body, html {
     z-index: 999;
     top: 0;
     padding: 0.5em;
-    /* > .ProfilePicture {
-        width: 100%;
-        display: flex;
-        justify-content: left;
-        align-items: left;
-    }
-    > .PortfolioNavigation {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    > .Socials {
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        align-items: right;
-    } */
 }
 
 .NavBarContainer > * > a {
