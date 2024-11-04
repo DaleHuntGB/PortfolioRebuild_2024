@@ -55,7 +55,7 @@ body, html {
 
 .ShootingStar {
     position: absolute;
-    background: var(--CLR_ACCENT);
+    background: var(--CLR_ALTACCENT);
     border-radius: 50%;
     opacity: 100%;
     animation: ShootingStarEffect .5s linear infinite;
@@ -131,11 +131,8 @@ body, html {
     overflow: hidden;
     > p {
         margin: 1em;
-        color: var(--CLR_ACCENT);
         user-select: none;
         font-weight: var(--FWEIGHT-HEADER);
-        position: relative;
-        text-transform: capitalize;
         font-size: 3em;
     }
 }
@@ -272,7 +269,7 @@ body, html {
     font-size: 1em;
     font-weight: bold;
     white-space: nowrap;
-    color: var(--CLR_ACCENT);
+    color: var(--CLR_ALTACCENT);
     position: relative;
     display: inline-block;
 }
@@ -282,9 +279,9 @@ body, html {
     position: absolute;
     left: 100%;
     bottom: 0;
-    width: 0.5em;
-    height: 0.1em;
-    margin: 0.25em 0.25em;
+    width: 0.05em;
+    height: 1em;
+    margin: 0.25em 0.1em;
     background-color: white;
     animation: TypingBlink 0.5s steps(1) infinite;
 }
