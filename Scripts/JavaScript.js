@@ -92,7 +92,7 @@ window.addEventListener('resize', updateImageWidths);
 
 // Typing Animation
 
-const WordsToType = ["Dale Hunt", "Unhalted", "Gamer", "Developer", "Minimalist"];
+const WordsToType = ["Dale Hunt", "Unhalted", "Gamer", "Developer", "Minimalist", "Linux Enthusiast"];
 const TypingSpeed = 100;
 const DelayBetweenWords = 1500;
 
