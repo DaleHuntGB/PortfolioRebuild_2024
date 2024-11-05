@@ -133,6 +133,16 @@ body, html {
         font-weight: var(--FWEIGHT-BODY);
         padding: 1em 0em;
     }
+    > .QuoteText {
+        font-style: italic;
+        font-weight: var(--FWEIGHT-HEADER);
+        color: var(--CLR_ALTACCENT);
+    }
+    .QuoteAuthor {
+        font-weight: var(--FWEIGHT-BODY);
+        margin: -2em;
+        font-size: smaller;
+    }
 }
 
 .ProjectNavigator {
