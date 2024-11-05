@@ -92,9 +92,10 @@ window.addEventListener('resize', updateImageWidths);
 
 // Typing Animation
 
-const WordsToType = ["Dale Hunt", "Unhalted", "Gamer", "Developer", "Minimalist", "Linux Enthusiast"];
+const WordsToType = ["Dale Hunt", "Unhalted", "Gamer", "Developer", "Minimalist"];
 const TypingSpeed = 100;
 const DelayBetweenWords = 1500;
+const HomeContainer = document.querySelector('.HomeContainer');
 
 let CurrentWord = 0;
 let CurrentChar = 0;
@@ -124,5 +125,10 @@ function DeleteWord() {
     }
 }
 
-TypeWord();
+if (HomeContainer)
+{
+    TypeWord();
+}
+
+
 
