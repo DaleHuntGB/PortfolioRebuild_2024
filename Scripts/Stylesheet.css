@@ -1,11 +1,11 @@
 :root {
     /* Colours */
-    --CLR_BG: #111111;
-    --CLR_SBG: #222222;
-    --CLR_TBG: #333333;
+    --CLR_BG: #101010;
+    --CLR_SBG: #202020;
+    --CLR_TBG: #252525;
     --CLR_TXT: #F5F5F5;
-    --CLR_ACCENT: #28B8B8;
-    --CLR_ALTACCENT: #9FEDED;
+    --CLR_ACCENT: #60BBF0;
+    --CLR_ALTACCENT: #80AACC;
     --CLR_LINK: #FF8040;
     --CLR_LINKHOVER: #FFFFFF;
     /* Fonts */
