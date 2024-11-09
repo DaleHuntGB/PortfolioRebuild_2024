@@ -15,11 +15,16 @@
     --PARA_WIDTH: 70ch;
 }
 
+@font-face {
+    font-family: "Terminal";
+    src: url("../Media/Fonts/Terminal.otf");
+}
+
 * {
     margin: 0em;
     padding: 0em;
     box-sizing: border-box;
-    font-family: "Gabarito", sans-serif;
+    font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
     font-weight: var(--FWEIGHT-BODY);
 }
@@ -116,6 +121,8 @@ body, html {
         user-select: none;
         font-weight: var(--FWEIGHT-HEADER);
         font-size: 3em;
+        font-family: "Terminal";
+        color: #40FF40;
     }
 }
 
