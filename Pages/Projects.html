@@ -32,43 +32,33 @@
             <a href="#MinimapStatsProject"><i class="fa-regular fa-folder-open"></i> MinimapStats</a>
             <a href="#PartyConfirmationGenerator"><i class="fa-regular fa-folder-open"></i> Party Confirmation Generator</a>
             <a href="#AerialSpaceProject"><i class="fa-regular fa-folder-open"></i> AerialSpace</a>
-            <a href="#!FlappBirdProject"><i class="fa-regular fa-folder-open"></i> !FlappyBird</a>
+            <a href="#!FlappyBirdProject"><i class="fa-regular fa-folder-open"></i> !FlappyBird</a>
             <a href="#EliteParkourProject"><i class="fa-regular fa-folder-open"></i> EliteParkour</a>
             <a href="#AttendyAttendanceProject"><i class="fa-regular fa-folder-open"></i> Attendy</a>
         </div>
-
+        <!-- All Projects -->
         <div class="ProjectsContainer">
+            <!-- Accessibility In Games -->
             <div class="ProjectContainer Project" id="ComputerProject">
                 <h1>Accessibility In Games: Unity / C#</h1>
                 <p>This project explores improving accessibility in video games for players with visual impairments, focusing on colorblindness. I developed a tower defense game to showcase features like colourblind modes (Protanopia, Deuteranopia, Tritanopia), high-contrast settings, and fully customizable colors. Built using Unity, the project is designed as a flexible starting point for developers to integrate accessibility into their games, regardless of genre. The focus of this project was to make the development process around accessibility more streamlined and hopefully more achievable.</p>
                 <p class="ExtraPadding"><a href="https://youtu.be/Ea9F3E23MiM" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Explanation</a></p>
                 <p class="ExtraPadding"><a href="https://github.com/DaleHuntGB/TowerDefenseAccessibility" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a></p>
-                <p class="ExtraPadding"><a href="/Media/Y3_ComputerProject/Report.pdf"><i class="fa-solid fa-file-pdf"></i> Technical Explanation</a></p>
+                <p class="ExtraPadding"><a href="/Media/Y3_ComputerProject/Report.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Technical Explanation</a></p>
                 <div class="ProjectContainerImages">
                     <img src="/Media/Y3_ComputerProject/CP_Protanopia.png" alt="Accessibility In Games Protanopia">
                     <img src="/Media/Y3_ComputerProject/CP_HighContrast.png" alt="Accessibility In Games High Contrast">
                     <img src="/Media/Y3_ComputerProject/CP_CustomColourPicker.gif" alt="Accessibility In Games Custom Colour Picker">
                 </div>
             </div>
-            <div class="ProjectContainer Project" id="MinimapStatsProject">
-                <h1>MinimapStats: LUA</h1>
-                <p>MinimapStats is a customizable World of Warcraft AddOn that integrates essential information directly onto the Minimap. It provides real-time data like in-game or local time, player in-game location, FPS, and latency in a sleek, unobtrusive display. Users can tailor settings for font size, position, and refresh rate, ensuring the information fits seamlessly with their interface. Designed for performance and compatibility, MinimapStats offers a streamlined experience for players who want quick access to game metrics without clutter.</p>
-                <p>MinimapStats is available to download on <a href="https://www.curseforge.com/wow/addons/minimapstats" target="_blank">CurseForge</a> and <a href="https://addons.wago.io/addons/minimapstats" target="_blank">WagoAddOns</a></p>
-                <p class="ExtraPadding"><a href="https://github.com/DaleHuntGB/MinimapStats" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a></p>
-                <div class="ProjectContainerImages">
-                    <img src="/Media/MinimapStats/Default.png" alt="MinimapStats Default">
-                    <img src="/Media/MinimapStats/Tooltip.png" alt="MinimapStats Tooltip">
-                    <img src="/Media/MinimapStats/Alternate.png" alt="MinimapStats Alternate">
-                </div>
-            </div>
-
-        <div class="ProjectsContainer">
+            <!-- Game Engine Sub-System -->
             <div class="ProjectContainer Project" id="GameEngineSubSystem">
                 <h1>Game Engine Sub-System: C++ / SDL</h1>
                 <p>For this assignment, I developed a customizable pause menu sub-system to integrate into an existing game engine, focusing on user interface due to my enthuasism for UI. My approach was to create a generalizable sub-system that could easily be implemented in any game using the engine. The core of this sub-system includes a <span class="NoticeMe">GUIController</span> that manages two main functions — <span class="NoticeMe">GUIUpdate</span> and <span class="NoticeMe">DrawGUI</span> — along with a list of GUIElements. The <span class="NoticeMe">GUIElement</span> is a template class for various UI components, handling sound, function, and design assignments for all inheriting elements. The <span class="NoticeMe">Button</span> class, a key component derived from GUIElement, is primarily responsible for user interface navigation. This sub-system showcases my skills in building modular, flexible UI components for diverse game applications.</p>
                 <p class="ExtraPadding"><a href="https://youtu.be/hFd8DRD2dUI" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Explanation</a></p>
                 <p class="ExtraPadding"><a href="https://github.com/DaleHuntGB/CI517_GameEngineFundamentals/tree/master/XCube/src/engine/custom" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a></p>
             </div>
+            <!-- MinimapStats -->
             <div class="ProjectContainer Project" id="MinimapStatsProject">
                 <h1>MinimapStats: LUA</h1>
                 <p>MinimapStats is a customizable World of Warcraft AddOn that integrates essential information directly onto the Minimap. It provides real-time data like in-game or local time, player in-game location, FPS, and latency in a sleek, unobtrusive display. Users can tailor settings for font size, position, and refresh rate, ensuring the information fits seamlessly with their interface. Designed for performance and compatibility, MinimapStats offers a streamlined experience for players who want quick access to game metrics without clutter.</p>
@@ -80,6 +70,7 @@
                     <img src="/Media/MinimapStats/Alternate.png" alt="MinimapStats Alternate">
                 </div>
             </div>
+            <!-- Party Confirmation Generator -->
             <div class="ProjectContainer Project" id="PartyConfirmationGenerator">
                 <h1>Party Confirmation Generator: Python / Flask</h1>
                 <p>The Party Bookings Confirmation project is a <span class="NoticeMe">Flask</span> based web application for managing party bookings. It allows users to input booking details through a web interface and instantly generates a personalized Word document using <span class="NoticeMe">BytesIO</span> which enables the document to be created and delivered in-memory without needing to save it on the server. This approach allows for more secure and efficient handling of data, as the booking information is never stored permanently. Hosted on Render, this web application is accessible across devices, offering a seamless experience for users without the need for local setup.</p>
@@ -87,6 +78,7 @@
                 <p class="ExtraPadding"><i class="fa-solid fa-caret-right"></i><a href="https://partybookingsconfirmation.onrender.com/" target="_blank"> Party Confirmation Generator Live </a><i class="fa-solid fa-caret-left"></i></p>
                 <p class="ExtraPadding"><span class="SmallNoticeMe">~50s Initial Load Time</span></p>
             </div>
+            <!-- AerialSpace -->
             <div class="ProjectContainer Project" id="AerialSpaceProject">
                 <h1>AerialSpace: C++ / SDL</h1>
                 <p>As part of my University Degree, we had to develop a game using C++ and SDL. I developed AerialSpace, an aerial shooter inspired by the classic Space Invaders. The primary objective was to adapt and build on the provided starter code to create a unique and more challenging game. In addition to following the basic gameplay mechanics, I introduced multiple difficulty levels and a final boss fight, creating a more interesting endgame experience.</p>
@@ -96,7 +88,8 @@
                     <img src="/Media/Y1_AerialSpace/AS_DifficultySelection.png" alt="Aerial Space Difficulty Selection">
                 </div>
             </div>
-            <div class="ProjectContainer Project" id="!FlappBirdProject">
+            <!-- !FlappyBird -->
+            <div class="ProjectContainer Project" id="!FlappyBirdProject">
                 <h1><span class="RedNotFlag">!</span>FlappyBird: JavaScript / Phaser3</h1>
                 <p>Again, as part of my University Degree, I developed an alternative version of Flappy Bird using <span class="NoticeMe">JavaScript</span> and the <span class="NoticeMe">Phaser</span> Library, adding unique progression mechanics and challenges to enhance the classic gameplay. In this version, players navigate through an increasingly challenging environment, where enemies gain speed and vary in position as you progress. Players can collect coins, hearts, and occasional insects to boost their score and health. A high-score tracking system, stored locally, allows players to monitor their progress and provides options to reset or replay after each game.</p>
                 <div class="ProjectContainerImages">
@@ -105,11 +98,13 @@
                     <img src="/Media/Y2_!FlappyBird/FB_EndScreen.png" alt="!FlappyBird End Screen">
                 </div>
             </div>
+            <!-- Elite Parkour -->
             <div class="ProjectContainer Project" id="EliteParkourProject">
                 <h1>Elite Parkour: UE5 / Visual Scripting</h1>
                 <p>For this project, Elite Parkour, I used Unreal Engine and primarily visual scripting to create a third-person experience set in an abandoned training facility designed for elite military professionals, with elements inspired by games like Portal. Starting with a Third-Person Template, I integrated several unique systems, including a pick-up and drop interaction, a basic checkpoint system, and a unique feature to allow swapping between first and third-person perspectives.</p>
                 <p class="ExtraPadding"><a href="https://youtu.be/wfLITmBJLw0" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Demonstration</a></p>
             </div>
+            <!-- Attendy Attendance -->
             <div class="ProjectContainer Project" id="AttendyAttendanceProject">
                 <h1>Attendy - Attendance Tracker: JavaScript / ThreeJS</h1>
                 <p>Attendy is a private attendance tracker developed as a group project to address the university’s increased focus on attendance without a way for students to track it themselves. Created with a team of three other students, the platform enables users to build a local attendance record accessible through any mobile browser. The current version is live, and we’re planning infrastructure improvements, including QR code scanning for streamlined attendance tracking. All data will be stored locally in a JSON file on each student’s device, ensuring privacy and accessibility without relying on external databases.</p>
