@@ -29,6 +29,10 @@
     font-weight: var(--FWEIGHT-BODY);
 }
 
+.IsPCOnly {
+    display: none;
+}
+
 body, html {
     background-color: var(--CLR_BG);
     color: var(--CLR_TXT);
