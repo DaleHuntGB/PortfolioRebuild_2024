@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0em;
+  margin: 0em;
+  background-color: #0f0f0f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-image: radial-gradient(var(--clr-SecondaryAccent) 1px, transparent 1px), radial-gradient(var(--clr-SecondaryAccent) 1px, var(--clr-SecondaryBG) 1px);
+  background-size: 38px 38px;
+  background-position: 0 0, 19px 19px;
+}
+
+canvas {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 1px black;
+}
+
+.notFlappyBird_NavigationBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: transparent;
+  width: 726px;
+  height: 2em;
+}
+
+.CreatedBy_SubText {
+  justify-content: flex-end;
+  background-color: transparent;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 0 6px;
+  color: white
+}
