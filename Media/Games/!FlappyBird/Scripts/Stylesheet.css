@@ -6,7 +6,7 @@ body {
   height: 100vh;
   padding: 0em;
   margin: 0em;
-  background-color: #0f0f0f;
+  background-color: #202020;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-image: radial-gradient(var(--clr-SecondaryAccent) 1px, transparent 1px), radial-gradient(var(--clr-SecondaryAccent) 1px, var(--clr-SecondaryBG) 1px);
@@ -15,9 +15,22 @@ body {
 }
 
 canvas {
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 1px black;
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.25) 0px 5px 5px;
+}
+
+.NBLinks > a {
+  color: var(--CLR_LINK);
+  text-decoration: none;
+  text-align: center;
+  font-weight: var(--FWEIGHT-LINK);
+  transition: 0.5s ease-in-out color;
+  margin: 0em 1em;
+}
+
+.NBLinks > a:hover {
+  color: var(--CLR_LINKHOVER);
+  transition: 0.5s ease-in-out color;
 }
 
 .notFlappyBird_NavigationBar {
@@ -36,6 +49,6 @@ canvas {
   margin-left: auto;
   font-weight: 600;
   font-size: 1em;
-  padding: 0 6px;
+  padding: 0 1em;
   color: white
 }
