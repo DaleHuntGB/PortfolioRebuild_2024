@@ -130,5 +130,20 @@ if (HomeContainer)
     TypeWord();
 }
 
+// Randomize Quotes
+const Quotes = [
+    {text: "I love inside jokes. I'd love to be a part of one someday.", author: "Michael Scott • S03E02 • The Convention"},
+    {text: "I am running away from my responsibilities, and it feels good.", author: "Michael Scott • S04E07 • Money"},
+    {text: "I just want to lie on the beach and eat hot dogs. That’s all I’ve ever wanted.", author: "Kevin Malone • S03E22 • Beach Games"},
+];
+
+function RandomizeQuotes() {
+    const quoteElement = document.querySelector('.QuoteText');
+    const authorElement = document.querySelector('.QuoteAuthor');
+    const randomQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
+    quoteElement.textContent = `"${randomQuote.text}"`; 
+    authorElement.textContent = `${randomQuote.author}`;
+}
+document.addEventListener("DOMContentLoaded", RandomizeQuotes);
 
 
