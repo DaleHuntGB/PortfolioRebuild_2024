@@ -146,4 +146,48 @@ function RandomizeQuotes() {
 }
 document.addEventListener("DOMContentLoaded", RandomizeQuotes);
 
+function SetColorPalette(isDarkMode) {
+    root = document.documentElement;
+    const modeIndicator = document.querySelector('#ModeIndicator');
+    modeIndicator.className = isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    if (isDarkMode) {
+        // Switch to Dark Mode
+        root.style.setProperty('--CLR_BG', '#272822');
+        root.style.setProperty('--CLR_SBG', '#3E3D32');
+        root.style.setProperty('--CLR_TBG', '#49483E');
+        root.style.setProperty('--CLR_TXT', '#F8F8F2');
+        root.style.setProperty('--CLR_ACCENT', '#66D9EF');
+        root.style.setProperty('--CLR_ALTACCENT', '#A1EFE4');
+        root.style.setProperty('--CLR_LINK', '#FD971F');
+        root.style.setProperty('--CLR_LINKHOVER', '#F92672');
+        root.style.setProperty('--CLR_TERMINAL', '#A6E22E');
+    } else {
+        // Switch to Light Mode
+        root.style.setProperty('--CLR_BG', '#F8F8F2');
+        root.style.setProperty('--CLR_SBG', '#EAE8D5');
+        root.style.setProperty('--CLR_TBG', '#D5D2BE');
+        root.style.setProperty('--CLR_TXT', '#272822');
+        root.style.setProperty('--CLR_ACCENT', '#2185D0');
+        root.style.setProperty('--CLR_ALTACCENT', '#20C997');
+        root.style.setProperty('--CLR_LINK', '#D35400');
+        root.style.setProperty('--CLR_LINKHOVER', '#E83E8C');
+        root.style.setProperty('--CLR_TERMINAL', '#50A14F');
+    }
+}
 
+function SetDarkModeStatus() {
+    const root = document.documentElement;
+    const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
+    const newMode = !isDarkMode;
+    const modeIndicator = document.querySelector('#ModeIndicator');
+    modeIndicator.className = newMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    localStorage.setItem('isDarkMode', newMode);
+    root.style.setProperty('--BOOL_DARKMODE', newMode);
+    SetColorPalette(newMode);
+}
+
+window.onload = function () {
+    const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
+    document.documentElement.style.setProperty('--BOOL_DARKMODE', isDarkMode);
+    SetColorPalette(isDarkMode);
+};

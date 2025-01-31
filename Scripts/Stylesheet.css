@@ -1,13 +1,15 @@
 :root {
     /* Colours */
-    --CLR_BG: #101010;
+    /* --CLR_BG: #101010;
     --CLR_SBG: #202020;
     --CLR_TBG: #252525;
     --CLR_TXT: #F5F5F5;
     --CLR_ACCENT: #60BBF0;
     --CLR_ALTACCENT: #80AACC;
     --CLR_LINK: #FF8040;
-    --CLR_LINKHOVER: #FFFFFF;
+    --CLR_LINKHOVER: #FFFFFF; 
+    --CLR_TERMINAL: #40FF40; */
+    --BOOL_DARKMODE: true;
     /* Fonts */
     --FWEIGHT-HEADER: 900;
     --FWEIGHT-BODY: 500;
@@ -17,7 +19,7 @@
 
 @font-face {
     font-family: "Terminal";
-    src: url("../Media/Fonts/Terminal.otf");
+    src: url("../Media/Fonts/Hack_Regular.ttf ");
 }
 
 * {
@@ -98,7 +100,8 @@ body, html {
     padding: 0.5em;
 }
 
-.NavBarContainer > * > a {
+.NavBarContainer > * > a,
+.NavBarContainer > * > button {
     color: var(--CLR_LINK);
     text-decoration: none;
     text-align: center;
@@ -107,9 +110,16 @@ body, html {
     margin: 0em 1em;
 }
 
-.NavBarContainer > * > a:hover {
+.NavBarContainer > * > a:hover,
+.NavBarContainer > * > button:hover {
     color: var(--CLR_LINKHOVER);
     transition: 0.5s ease-in-out color;
+}
+
+.NavBarContainer > * > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .HomeContainer {
@@ -126,7 +136,7 @@ body, html {
         font-weight: var(--FWEIGHT-HEADER);
         font-size: 3em;
         font-family: "Terminal";
-        color: #40FF40;
+        color: var(--CLR_TERMINAL);
     }
 }
 
