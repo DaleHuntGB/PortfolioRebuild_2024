@@ -187,6 +187,9 @@ function SetDarkModeStatus() {
 }
 
 window.onload = function () {
+    if (localStorage.getItem('isDarkMode') === null) {
+        localStorage.setItem('isDarkMode', 'true'); // Set default to dark mode
+    }
     const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
     document.documentElement.style.setProperty('--BOOL_DARKMODE', isDarkMode);
     SetColorPalette(isDarkMode);
