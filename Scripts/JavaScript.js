@@ -151,28 +151,28 @@ function SetColorPalette(isDarkMode) {
     const modeIndicator = document.querySelector('#ModeIndicator');
     modeIndicator.className = isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
     if (isDarkMode) {
-        // Switch to Dark Mode (Dracula Theme)
-        root.style.setProperty('--CLR_BG', '#282a36');
-        root.style.setProperty('--CLR_SBG', '#44475a');
-        root.style.setProperty('--CLR_TBG', '#3b4051');
-        root.style.setProperty('--CLR_TXT', '#f8f8f2');
-        root.style.setProperty('--CLR_ACCENT', '#ff79c6');
-        root.style.setProperty('--CLR_ALTACCENT', '#bd93f9');
-        root.style.setProperty('--CLR_LINK', '#50fa7b');
-        root.style.setProperty('--CLR_LINKHOVER', '#ffb86c');
-        root.style.setProperty('--CLR_TERMINAL', '#8be9fd');
+        // Switch to Dark Mode
+        root.style.setProperty('--CLR_BG', '#101010');
+        root.style.setProperty('--CLR_SBG', '#202020');
+        root.style.setProperty('--CLR_TBG', '#252525');
+        root.style.setProperty('--CLR_TXT', '#F5F5F5');
+        root.style.setProperty('--CLR_ACCENT', '#60BBF0');
+        root.style.setProperty('--CLR_ALTACCENT', '#80AACC');
+        root.style.setProperty('--CLR_LINK', '#FF8040');
+        root.style.setProperty('--CLR_LINKHOVER', '#FFFFFF');
+        root.style.setProperty('--CLR_TERMINAL', '#40FF40');
     } else {
-        // Switch to Light Mode
-        root.style.setProperty('--CLR_BG', '#f8f8f2');
-        root.style.setProperty('--CLR_SBG', '#eeeeee');
-        root.style.setProperty('--CLR_TBG', '#dddddd');
-        root.style.setProperty('--CLR_TXT', '#282a36');
-        root.style.setProperty('--CLR_ACCENT', '#ff5555');
-        root.style.setProperty('--CLR_ALTACCENT', '#ff79c6');
-        root.style.setProperty('--CLR_LINK', '#6272a4');
-        root.style.setProperty('--CLR_LINKHOVER', '#ffb86c');
-        root.style.setProperty('--CLR_TERMINAL', '#50fa7b');
-    }
+        // Switch to Light Mode (Adjusted for good contrast)
+        root.style.setProperty('--CLR_BG', '#FFFFFF');
+        root.style.setProperty('--CLR_SBG', '#F5F5F5');
+        root.style.setProperty('--CLR_TBG', '#E5E5E5');
+        root.style.setProperty('--CLR_TXT', '#101010');
+        root.style.setProperty('--CLR_ACCENT', '#007ACC');
+        root.style.setProperty('--CLR_ALTACCENT', '#4090C0');
+        root.style.setProperty('--CLR_LINK', '#D35400');
+        root.style.setProperty('--CLR_LINKHOVER', '#FF5733');
+        root.style.setProperty('--CLR_TERMINAL', '#008000');
+    }    
 }
 
 function SetDarkModeStatus() {
