@@ -151,27 +151,27 @@ function SetColorPalette(isDarkMode) {
     const modeIndicator = document.querySelector('#ModeIndicator');
     modeIndicator.className = isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
     if (isDarkMode) {
-        // Switch to Dark Mode
-        root.style.setProperty('--CLR_BG', '#272822');
-        root.style.setProperty('--CLR_SBG', '#3E3D32');
-        root.style.setProperty('--CLR_TBG', '#49483E');
-        root.style.setProperty('--CLR_TXT', '#F8F8F2');
-        root.style.setProperty('--CLR_ACCENT', '#66D9EF');
-        root.style.setProperty('--CLR_ALTACCENT', '#A1EFE4');
-        root.style.setProperty('--CLR_LINK', '#FD971F');
-        root.style.setProperty('--CLR_LINKHOVER', '#F92672');
-        root.style.setProperty('--CLR_TERMINAL', '#A6E22E');
+        // Switch to Dark Mode (Dracula Theme)
+        root.style.setProperty('--CLR_BG', '#282a36');
+        root.style.setProperty('--CLR_SBG', '#44475a');
+        root.style.setProperty('--CLR_TBG', '#3b4051');
+        root.style.setProperty('--CLR_TXT', '#f8f8f2');
+        root.style.setProperty('--CLR_ACCENT', '#ff79c6');
+        root.style.setProperty('--CLR_ALTACCENT', '#bd93f9');
+        root.style.setProperty('--CLR_LINK', '#50fa7b');
+        root.style.setProperty('--CLR_LINKHOVER', '#ffb86c');
+        root.style.setProperty('--CLR_TERMINAL', '#8be9fd');
     } else {
         // Switch to Light Mode
-        root.style.setProperty('--CLR_BG', '#F8F8F2');
-        root.style.setProperty('--CLR_SBG', '#EAE8D5');
-        root.style.setProperty('--CLR_TBG', '#D5D2BE');
-        root.style.setProperty('--CLR_TXT', '#272822');
-        root.style.setProperty('--CLR_ACCENT', '#2185D0');
-        root.style.setProperty('--CLR_ALTACCENT', '#20C997');
-        root.style.setProperty('--CLR_LINK', '#D35400');
-        root.style.setProperty('--CLR_LINKHOVER', '#E83E8C');
-        root.style.setProperty('--CLR_TERMINAL', '#50A14F');
+        root.style.setProperty('--CLR_BG', '#f8f8f2');
+        root.style.setProperty('--CLR_SBG', '#eeeeee');
+        root.style.setProperty('--CLR_TBG', '#dddddd');
+        root.style.setProperty('--CLR_TXT', '#282a36');
+        root.style.setProperty('--CLR_ACCENT', '#ff5555');
+        root.style.setProperty('--CLR_ALTACCENT', '#ff79c6');
+        root.style.setProperty('--CLR_LINK', '#6272a4');
+        root.style.setProperty('--CLR_LINKHOVER', '#ffb86c');
+        root.style.setProperty('--CLR_TERMINAL', '#50fa7b');
     }
 }
 
