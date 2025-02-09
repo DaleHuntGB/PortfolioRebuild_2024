@@ -1,23 +1,14 @@
 :root {
     /* Colours */
-    /* --CLR_BG: #101010;
+    --CLR_BG: #101010;
     --CLR_SBG: #202020;
     --CLR_TBG: #252525;
     --CLR_TXT: #F5F5F5;
     --CLR_ACCENT: #60BBF0;
     --CLR_ALTACCENT: #80AACC;
     --CLR_LINK: #FF8040;
-    --CLR_LINKHOVER: #FFFFFF; 
-    --CLR_TERMINAL: #40FF40; */
-    --CLR_BG: #272822;
-    --CLR_SBG: #3E3D32;
-    --CLR_TBG: #49483E;
-    --CLR_TXT: #F8F8F2;
-    --CLR_ACCENT: #66D9EF;
-    --CLR_ALTACCENT: #A1EFE4;
-    --CLR_LINK: #FD971F;
-    --CLR_LINKHOVER: #F92672;
-    --CLR_TERMINAL: #A6E22E;
+    --CLR_LINKHOVER: #FFFFFF;
+    --CLR_TERMINAL: #40FF40;
     --BOOL_DARKMODE: true;
     /* Fonts */
     --FWEIGHT-HEADER: 900;
