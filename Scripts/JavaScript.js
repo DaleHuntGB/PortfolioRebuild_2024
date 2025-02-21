@@ -194,3 +194,38 @@ window.onload = function () {
     document.documentElement.style.setProperty('--BOOL_DARKMODE', isDarkMode);
     SetColorPalette(isDarkMode);
 };
+
+// UI Interactions
+async function loadData() {
+    try {
+        const response = await fetch("./Media/UIImportStrings.json");
+        return await response.json();
+    } catch (error) {
+        console.error("Error - Unable To Load JSON Data:", error);
+        return null;
+    }
+}
+
+async function copyToClipboard(event) {
+    const jsonData = await loadData();
+    if (!jsonData) return;
+
+    const category = event.target.getAttribute("AddOn");
+    const type = event.target.getAttribute("ProfileString");
+
+    if (jsonData[category] && jsonData[category][type]) {
+        const textToCopy = jsonData[category][type];
+        try {
+            await navigator.clipboard.writeText(textToCopy);
+            console.log("Copied Text To Clipboard:", textToCopy);
+        } catch (err) {
+            console.error("Failed To Copy Text:", err);
+        }
+    } else {
+        alert("No Import String. Please report!");
+    }
+}
+
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", copyToClipboard);
+});

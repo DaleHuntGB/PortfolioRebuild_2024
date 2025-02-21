@@ -237,7 +237,115 @@ body, html {
     }
 }
 
-
+.UIContainer 
+{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin: 1em;
+    text-align: center;
+    > .WelcomeToUIContainer, .AddOnContainer, .ImportStringsContainer
+    {
+        border-radius: 0.5em;
+        padding: 1em;
+        background-color: var(--CLR_TBG);
+        margin: 0.5em 0em;
+        width: 50%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+        > h1 {
+            font-weight: var(--FWEIGHT-HEADER);
+            color: var(--CLR_ACCENT);
+        }
+        > p {
+            max-width: var(--PARA_WIDTH);
+            font-weight: var(--FWEIGHT-BODY);
+            margin: auto;
+            > a {
+                color: var(--CLR_LINK);
+                text-decoration: none;
+                text-align: center;
+                font-weight: var(--FWEIGHT-LINK);
+                transition: 0.5s ease-in-out color;
+            }
+            > a:hover {
+                color: var(--CLR_LINKHOVER);
+                transition: 0.5s ease-in-out color;
+            }
+        }
+        > .AddOnList
+        {
+            text-align: center;
+            > ul
+            {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                > li
+                {
+                    margin: 0.5em;
+                }
+            }
+        }
+        > .ProfileContainer
+        {
+            .ElvUI, .Plater, .WeakAuras, .OmniCD, .BigWigs, .Details
+            {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-areas:
+                    "title title"
+                    "label1 button1"
+                    "label2 button2"
+                    "label3 button3";
+                gap: 0.5em;
+                align-items: center;
+                padding: 0.5em;
+                margin: 0.5em auto;
+                border-radius: 0.5em;
+                width: 75%;
+                box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+                > h2 
+                {
+                    grid-area: title;
+                    text-align: center;
+                    font-weight: var(--FWEIGHT-HEADER);
+                    color: var(--CLR_ACCENT);
+                    background-color: var(--CLR_BG);
+                    border-radius: 0.5em;
+                }
+                > p:nth-of-type(1) { grid-area: label1; }
+                > button:nth-of-type(1) { grid-area: button1; }
+                > p:nth-of-type(2) { grid-area: label2; }
+                > button:nth-of-type(2) { grid-area: button2; }
+                > p:nth-of-type(3) { grid-area: label3; }
+                > button:nth-of-type(3) { grid-area: button3; }
+                > p {
+                    justify-self: start;
+                    padding: 0.5em;
+                }
+                > button {
+                    justify-self: end;
+                    color: var(--CLR_LINK);
+                    text-decoration: none;
+                    text-align: center;
+                    font-weight: var(--FWEIGHT-LINK);
+                    transition: 0.5s ease-in-out color;
+                    margin: 0.5em;
+                    padding: 0.5em;
+                    cursor: pointer;
+                    background: transparent;
+                    border: none;
+                }
+                > button:hover {
+                    color: var(--CLR_LINKHOVER);
+                    transition: 0.5s ease-in-out color;
+                }
+            }
+        }
+    }
+}
 
 .ExtraPadding {
     padding-top: 0.5em;
@@ -271,6 +379,12 @@ body, html {
         border-radius: 0.5em;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(0, 0, 0, 0.25) 0px 3px 6px;
     }
+}
+
+.ForceWhite 
+{
+    color: white;
+    font-weight: var(--FWEIGHT-HEADER);
 }
 
 
