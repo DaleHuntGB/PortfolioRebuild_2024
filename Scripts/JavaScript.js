@@ -226,8 +226,6 @@ async function copyToClipboard(event) {
     }
 }
 
-if (window.location.pathname.endsWith("ui.html")) {
-    document.querySelectorAll("button").forEach(button => {
-        button.addEventListener("click", copyToClipboard);
-    });
-}
+document.querySelectorAll(".StringButton").forEach(button => {
+    button.addEventListener("click", copyToClipboard);
+});
