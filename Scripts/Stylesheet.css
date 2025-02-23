@@ -357,6 +357,12 @@ body, html {
     text-align: center;
 }
 
+.NoticeMeYellow {
+    font-weight: var(--FWEIGHT-HEADER);
+    color: #FFCC00;
+    text-align: center;
+}
+
 .SmallNoticeMe{
     font-weight: var(--FWEIGHT-BODY);
     font-size: smaller;
