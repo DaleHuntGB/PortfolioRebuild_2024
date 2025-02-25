@@ -212,12 +212,13 @@ async function copyToClipboard(event) {
 
     const category = event.target.getAttribute("AddOn");
     const type = event.target.getAttribute("ProfileString");
+    const typeName = event.target.getAttribute("TypeName");
 
     if (jsonData[category] && jsonData[category][type]) {
         const textToCopy = jsonData[category][type];
         try {
             await navigator.clipboard.writeText(textToCopy);
-            console.log("Copied Text To Clipboard:", textToCopy);
+            alert(typeName + " successfully copied!");
         } catch (err) {
             console.error("Failed To Copy Text:", err);
         }
